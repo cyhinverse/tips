@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scandinavian Design System */
+@layer base {
+  :root {
+    --scandi-bg: #fafafa;
+    --scandi-surface: #ffffff;
+    --scandi-text: #1a1a1a;
+    --scandi-text-secondary: #6b7280;
+    --scandi-accent: #2563eb;
+    --scandi-border: #e5e7eb;
+  }
+
+  .dark {
+    --scandi-bg: #121212;
+    --scandi-surface: #1e1e1e;
+    --scandi-text: #ffffff;
+    --scandi-text-secondary: #9ca3af;
+    --scandi-accent: #3b82f6;
+    --scandi-border: #2a2a2a;
+  }
+}
+
+@layer components {
+  /* Scandinavian Card */
+  .scandi-card {
+    @apply rounded-3xl bg-white dark:bg-[#1E1E1E];
+    shadow-color: #000;
+    shadow-offset: 0px 4px;
+    shadow-opacity: 0.04;
+    shadow-radius: 12px;
+  }
+
+  /* Scandinavian Button - Primary */
+  .scandi-btn {
+    @apply rounded-2xl px-6 py-4 bg-[#1A1A1A] dark:bg-white;
+  }
+
+  .scandi-btn-text {
+    @apply text-white dark:text-[#1A1A1A] font-semibold text-center;
+  }
+
+  /* Scandinavian Button - Secondary */
+  .scandi-btn-secondary {
+    @apply rounded-2xl px-6 py-4 bg-white dark:bg-[#1E1E1E] border-2 border-gray-200 dark:border-[#333];
+  }
+
+  .scandi-btn-secondary-text {
+    @apply text-[#1A1A1A] dark:text-white font-semibold text-center;
+  }
+
+  /* Scandinavian Input */
+  .scandi-input {
+    @apply rounded-2xl px-5 py-4 bg-gray-50 dark:bg-[#1E1E1E] text-[#1A1A1A] dark:text-white;
+  }
+
+  /* Scandinavian Tag */
+  .scandi-tag {
+    @apply rounded-full px-3 py-1.5 bg-gray-100 dark:bg-[#2A2A2A];
+  }
+
+  .scandi-tag-text {
+    @apply text-xs font-medium text-gray-600 dark:text-gray-400;
+  }
+
+  /* Glass Effect */
+  .glass-effect {
+    @apply bg-white/80 dark:bg-[#1E1E1E]/80;
+    backdrop-filter: blur(20px);
+  }
+}
